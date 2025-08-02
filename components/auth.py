@@ -35,12 +35,12 @@ def login_signup_page():
   
 
     st.markdown('<div class="login-title">🔐 Login / Register</div>', unsafe_allow_html=True)
-    choice = st.radio("", ["Login", "Sign Up"], horizontal=True)
+    choice = st.radio("", ["Login", "Register"], horizontal=True)
 
     email = st.text_input("📧 Email", placeholder="Enter your email")
     password = st.text_input("🔑 Password", type="password", placeholder="Enter your password")
 
-    if choice == "Sign Up":
+    if choice == "Register":
         if st.button("🆕 Create Account"):
             try:
                 auth.create_user_with_email_and_password(email, password)
