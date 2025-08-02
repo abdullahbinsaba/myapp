@@ -390,7 +390,6 @@ def show_feedback_page():
             }])
             feedback_data.to_csv("data/feedback.csv", mode='a', header=False, index=False)
             st.success("✅ Thank you for your feedback!")
-            st.switch_page("components/dashboard.py")  # Streamlit >=1.25
         else:
             st.warning("Please provide both Name and Email.")
 
