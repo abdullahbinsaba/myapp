@@ -34,7 +34,7 @@ def login_signup_page():
 
   
 
-    st.markdown('<div class="login-title">🔐 Login / Sign Up</div>', unsafe_allow_html=True)
+    st.markdown('<div class="login-title">🔐 Login / Register</div>', unsafe_allow_html=True)
     choice = st.radio("", ["Login", "Sign Up"], horizontal=True)
 
     email = st.text_input("📧 Email", placeholder="Enter your email")
