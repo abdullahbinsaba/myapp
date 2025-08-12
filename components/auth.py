@@ -46,6 +46,7 @@ def login_signup_page():
                 auth.create_user_with_email_and_password(email, password)
                 st.success("🎉 Account created successfully!")
                 st.session_state.authenticated = True
+                st.experimental_rerun()
             except Exception as e:
                 st.error(f"❌ Error: {e}")
     else:
@@ -54,6 +55,7 @@ def login_signup_page():
                 auth.sign_in_with_email_and_password(email, password)
                 st.success("🔓 Logged in successfully!")
                 st.session_state.authenticated = True
+                st.experimental_rerun()
             except Exception as e:
                 st.error(f"❌ Login failed: {e}")
 
